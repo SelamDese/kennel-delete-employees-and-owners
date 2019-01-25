@@ -1,0 +1,55 @@
+{
+  "employees": [
+    {
+      "id": 2,
+      "name": "Jordan Nelson"
+    },
+    {
+      "id": 3,
+      "name": "Zoe LeBlanc"
+    },
+    {
+      "id": 4,
+      "name": "Blaise Roberts"
+    }
+  ],
+  "animals": [
+    {
+      "id": 2,
+      "name": "Jack"
+    },
+    {
+      "id": 3,
+      "name": "Angus"
+    },
+    {
+      "id": 4,
+      "name": "Henley"
+    },
+    {
+      "id": 5,
+      "name": "Derkins"
+    },
+    {
+      "id": 6,
+      "name": "Checkers"
+    }
+  ],
+  "owners": [
+    {
+      "id": 1,
+      "name": "Jessica",
+      "phoneNumber": "111"
+    },
+    {
+      "id": 2,
+      "name": "Jordan",
+      "phoneNumber": "222"
+    },
+    {
+      "id": 4,
+      "name": "Blaise",
+      "phoneNumber": "444"
+    }
+  ]
+}
