@@ -34,5 +34,22 @@
       "id": 6,
       "name": "Checkers"
     }
+  ],
+  "owners": [
+    {
+      "id": 1,
+      "name": "Jessica",
+      "phoneNumber": "111"
+    },
+    {
+      "id": 2,
+      "name": "Jordan",
+      "phoneNumber": "222"
+    },
+    {
+      "id": 4,
+      "name": "Blaise",
+      "phoneNumber": "444"
+    }
   ]
 }
