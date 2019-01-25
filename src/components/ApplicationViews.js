@@ -2,11 +2,13 @@ import { Route } from "react-router-dom";
 import React, { Component } from "react";
 import AnimalList from "./animal/AnimalList";
 import EmployeeList from "./employee/EmployeeList";
+import OwnerList from "./owner/OwnerList";
 
 export default class ApplicationViews extends Component {
   state = {
     animals: [],
-    employees: []
+    employees: [],
+    owners:[]
   };
 
   deleteAnimal = id => {
@@ -36,6 +38,19 @@ export default class ApplicationViews extends Component {
         })
       );
   };
+  deleteOwner = id => {
+    return fetch(`http://localhost:5002/owners/${id}`, {
+      method: "DELETE"
+    })
+      .then(response => response.json())
+      .then(() => fetch(`http://localhost:5002/owners`))
+      .then(response => response.json())
+      .then(owners =>
+        this.setState({
+            owners: owners
+        })
+      );
+  };
 
   componentDidMount() {
 
@@ -45,6 +60,9 @@ export default class ApplicationViews extends Component {
       .then(() =>fetch ("http://localhost:5002/employees")
       .then(r => r.json())
       .then(employees => this.setState({employees : employees})))
+      .then(() =>fetch ("http://localhost:5002/owners")
+      .then(r => r.json())
+      .then(owners => this.setState({owners : owners})))
   }
 
   render() {
@@ -57,6 +75,10 @@ export default class ApplicationViews extends Component {
         />
         <Route exact path="/employees" render={props => {
             return <EmployeeList deleteEmployee={this.deleteEmployee} employees={this.state.employees} />;
+          }}
+        />
+        <Route exact path="/owners" render={props => {
+            return <OwnerList deleteOwner={this.deleteOwner} owners={this.state.owners} />;
           }}
         />
       </React.Fragment>

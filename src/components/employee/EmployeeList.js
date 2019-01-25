@@ -11,11 +11,11 @@ class EmployeeList extends Component {
                     <div key={employee.id}>
                         {employee.name}
                         <a
-                  href="#"
-                  onClick={() => this.props.deleteEmployee(employee.id)}
-                >
-                  Delete
-                </a>
+                            href="#"
+                            onClick={() => this.props.deleteEmployee(employee.id)}
+                            >
+                            Delete
+                        </a>
                     </div>
                 )
             }
